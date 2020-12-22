@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "mac"
+version = "0.1.0"
+description = ""
+authors = ["Jean-Mark Wright <jeanmark.wright@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+ansible = "^2.10.4"
+jinja2 = "^2.11.2"
+pyyaml = "^5.3.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
