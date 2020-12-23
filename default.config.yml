@@ -1,0 +1,52 @@
+---
+downloads: ~/.ansible-downloads/
+
+# Apps to install
+homebrew_apps:
+  - node
+  - nvm
+  - ssh-copy-id
+  - wget
+  - ripgrep
+  - tmux
+  - zsh
+
+homebrew_taps:
+  - homebrew/core
+  - homebrew/cask
+
+homebrew_cask_apps:
+  - docker
+  - firefox-developer-edition
+  - licecap
+  - slack
+  - visual-studio-code
+  - whatsapp
+  - notion
+
+# Fonts to install
+fonts:
+   - https://github.com/tonsky/FiraCode/releases/download/5.2/Fira_Code_v5.2.zip
+
+
+# Dotfiles
+dotfiles_repo: "https://github.com/jaywhy13/dotfiles"
+dotfiles_repo_version: main
+dotfiles_repo_local_destination: "~/.dotfiles"
+dotfiles_files:
+  - .zshrc
+  - .gitconfig
+  - .gitignore_global
+  - .tmux.conf.local
+
+
+# Download repositories
+# NB: I haven't figured out a way to omit the name of the folder
+repositories:
+  - url: https://github.com/ohmyzsh/ohmyzsh
+    destination: "~/.oh-my-zsh"
+
+# OSX Defaults
+Configure_Bluetooth: yes
+Bluetooth_ShowInMenuBar: yes
+target_user_id: 'jmwright'
