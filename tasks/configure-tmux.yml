@@ -1,0 +1,10 @@
+---
+- name: Checkout .tmux
+  git:
+    repo: "https://github.com/gpakosz/.tmux"
+    dest: '~/.tmux'
+- name: Link to .tmux configuration
+  file:
+    src: "~/.tmux/.tmux.conf"
+    dest: "~/.tmux.conf"
+    state: link

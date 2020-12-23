@@ -1,0 +1,7 @@
+---
+- name: Download and install fonts
+  unarchive:
+    src: "{{ item }}"
+    dest: "/Library/Fonts"
+    remote_src: yes
+  loop: "{{ fonts}}"

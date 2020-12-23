@@ -1,0 +1,6 @@
+---
+- name: Checkout repositories
+  git:
+    repo: "{{ item.url }}"
+    dest: "{{ item.destination }}"
+  loop:  "{{ repositories }}"

@@ -1,0 +1,21 @@
+---
+- name: Install apps via Brew
+  homebrew:
+    name: "{{ item }}"
+    state: present
+  loop:  "{{ homebrew_apps }}"
+
+- name: Check which cask apps are installed
+  shell: brew list --cask {{ item }}
+  loop:  "{{ homebrew_cask_apps }}"
+  register: cask_apps
+  ignore_errors: true
+  changed_when: false
+
+- name: Install cask apps
+  shell: brew install --cask {{ item }}
+  when: "'not installed' in cask_apps['results'][index].stderr"
+  ignore_errors: true
+  loop:  "{{ homebrew_cask_apps }}"
+  loop_control:
+    index_var: index
