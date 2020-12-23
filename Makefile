@@ -1,10 +1,8 @@
+prepare:
+	./scripts/pre-requisites.sh
+
 setup:
-	@echo "🍏 Installing Xcode bare essentials"
-	xcode-select --install || true
-	echo
+	echo "Running Ansible"
+	# python3 -m poetry run ansible-galaxy install -r requirements.yml
+	python3 -m poetry run ansible-playbook setup.yml -i inventory --ask-become-pass
 
-	@echo "🐍 Installing Ansible via Poetry"
-	poetry install
-
-	@echo "Running Ansible"
-	poetry run ansible-playbook setup.yml -i inventory --ask-become-pass
