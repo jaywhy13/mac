@@ -23,6 +23,11 @@ The following gives an idea of what the playbook does. The playbooks use the var
    -  Checks out repositories
    -  Installs dotfiles from a given repository
 
+## Python Development
+
+To facilitate Python development, the `make prepare` installs `pipx`. `pipx` allows us to install Python packages that have executables in an isolated fashion. It creates virtual environments for each of these packages. I use `pipx` to install `poetry` for instance. Then we use `poetry` to install the dependencies for Ansible.
+
+
 # TODO
 -  Use `homebrew` [package](https://galaxy.ansible.com/geerlingguy/homebrew) for brew and cask apps when [this issue](https://github.com/geerlingguy/mac-dev-playbook/issues/87) is resolved.
 -  Add a `make teardown` command to remove all the configurations that have been added.
