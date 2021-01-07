@@ -1,0 +1,10 @@
+---
+- name: Install Python apps via Brew
+  homebrew:
+    name: "{{ item }}"
+    state: present
+  loop:  "{{ python.homebrew_apps }}"
+
+- name: Install Python apps via Brew
+  command: "pipx install {{ item }}"
+  loop:  "{{ python.pipx_apps }}"

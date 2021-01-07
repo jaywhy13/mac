@@ -50,3 +50,12 @@ repositories:
 Configure_Bluetooth: yes
 Bluetooth_ShowInMenuBar: yes
 target_user_id: 'jmwright'
+
+# Python configuration
+python:
+  # Python apps using pyenv
+  homebrew_apps:
+  - pyenv
+  - pyenv-virtualenv
+  # Apps to install using pipx (poetry is installed by `make prepare`)
+  pipx_apps: []
