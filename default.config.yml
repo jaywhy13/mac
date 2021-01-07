@@ -3,13 +3,17 @@ downloads: ~/.ansible-downloads/
 
 # Apps to install
 homebrew_apps:
-  - node
-  - nvm
+  # Shell
   - ssh-copy-id
   - wget
   - ripgrep
   - tmux
   - zsh
+  # Git
+  - lazygit
+  # Javascript
+  - node
+  - nvm
 
 homebrew_taps:
   - homebrew/core
