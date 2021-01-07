@@ -43,6 +43,8 @@ To facilitate Python development, the `make prepare` installs `pipx`. `pipx` all
       -  Cmd + 1/2 - change screen
       -  4th mouse button (mission control)
       - Ctrl-p and ctrl-n
+-  Replace `roles` in the `setup.yml` playbook with the `include_role` [directive](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/include_role_module.html)
+-  Configure lazygit with my command overrides (~/Library/Application Support/lazygit/config.yml)
 
 # Known Issues
 -  This only works on Homebrew 2.7.0 and above. Brew recently changed the syntax for installing Cask apps, which resulted in this [issue](https://github.com/ansible-collections/community.general/issues/1524).
