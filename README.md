@@ -30,6 +30,7 @@ To facilitate Python development, the `make prepare` installs `pipx`. `pipx` all
 
 # TODO
 -  Use `homebrew` [package](https://galaxy.ansible.com/geerlingguy/homebrew) for brew and cask apps when [this issue](https://github.com/geerlingguy/mac-dev-playbook/issues/87) is resolved.
+-  NVM Installation
 -  Add a `make teardown` command to remove all the configurations that have been added.
 -  Change shell to ZSH
 -  Development
