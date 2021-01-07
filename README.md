@@ -9,7 +9,8 @@ NB: There are NO tests yet. Use at your own risk.
 I have added a `Makefile` that handles some of the bootstrapping and makes it easy to run on a clean Mac.
 -  `make prepare` - this installs the pre-requisite steps:
    -  Installs Xcode essentials (`xcode-select --install`)
-   -  Installs Poetry (Python package and virtual environment manager)
+   -  Installs pipx (a Python package manager that installs executables for python packages in an isolated fashion)
+   -  Installs Poetry (Python package and virtual environment manager via pipx)
    -  Installs Ansible and its dependencies
 -  `make setup` runs Ansible.
 
