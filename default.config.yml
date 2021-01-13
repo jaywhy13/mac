@@ -78,3 +78,4 @@ cli:
   - zsh
   # Git
   - lazygit
+  - pgcli
