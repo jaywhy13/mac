@@ -46,10 +46,14 @@ To facilitate Python development, the `make prepare` installs `pipx`. `pipx` all
       - Ctrl-p and ctrl-n
 -  Replace `roles` in the `setup.yml` playbook with the `include_role` [directive](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/include_role_module.html)
 -  Configure lazygit with my command overrides (~/Library/Application Support/lazygit/config.yml)
+-  Add /usr/local/code-shell script
+-  Add `add-icon` script that adds an icon to ~/.tmux-icons
+-  https://github.com/yardnsm/tmux-1password
 
 # Known Issues
 -  This only works on Homebrew 2.7.0 and above. Brew recently changed the syntax for installing Cask apps, which resulted in this [issue](https://github.com/ansible-collections/community.general/issues/1524).
-
+-  I need to find a better way to install Ansible properly. Previously I was using Poetry via pipx. The problem with this is that pipx installs Poetry alongside whatever of Python is installed. This problem manifests when you try to run Poetry in any project that requires a different version of Python. Poetry wants to be installed under a Python version that matches what's in pyproject.toml.
+   -  Temporary fix is to install Poetry under each version of Python we install with pyenv. We can install Poetry by doing `pyenv install x.y.z && pyenv exec pip3 install poetry`. Then we can run `pyenv exec poetry install` to use poetry under pyenv's local version of Python.
 
 # Inspiration
 
