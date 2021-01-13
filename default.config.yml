@@ -29,6 +29,7 @@ homebrew_cask_apps:
   - notion
   - dash
   - tunnelblick
+  - spectacle
 
 # Fonts to install
 fonts:
