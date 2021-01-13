@@ -3,14 +3,6 @@ downloads: ~/.ansible-downloads/
 
 # Apps to install
 homebrew_apps:
-  # Shell
-  - ssh-copy-id
-  - wget
-  - ripgrep
-  - tmux
-  - zsh
-  # Git
-  - lazygit
   # Javascript
   - node
   - nvm
@@ -73,3 +65,15 @@ python:
   - pyenv-virtualenv
   # Apps to install using pipx (poetry is installed by `make prepare`)
   pipx_apps: []
+
+# CLI configuration
+cli:
+  homebrew_apps:
+  - fzf
+  - ssh-copy-id
+  - wget
+  - ripgrep
+  - tmux
+  - zsh
+  # Git
+  - lazygit
