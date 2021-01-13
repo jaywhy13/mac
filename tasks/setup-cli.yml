@@ -1,0 +1,6 @@
+---
+- name: Install CLI apps via Brew
+  homebrew:
+    name: "{{ item }}"
+    state: present
+  loop:  "{{ cli.homebrew_apps }}"

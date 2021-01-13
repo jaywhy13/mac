@@ -14,5 +14,6 @@
     - include_tasks: tasks/install-shell-apps.yml
     - include_tasks: tasks/checkout-repositories.yml
     - include_tasks: tasks/configure-tmux.yml
+    - include_tasks: tasks/setup-cli.yml
     - include_tasks: tasks/setup-python.yml
 
