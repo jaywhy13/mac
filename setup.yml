@@ -15,4 +15,5 @@
     - include_tasks: tasks/checkout-repositories.yml
     - include_tasks: tasks/configure-tmux.yml
     - include_tasks: tasks/setup-python.yml
+    - include_tasks: tasks/setup-productivity-apps.yml
 

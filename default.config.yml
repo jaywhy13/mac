@@ -26,7 +26,6 @@ homebrew_cask_apps:
   - slack
   - visual-studio-code
   - whatsapp
-  - notion
   - dash
   - tunnelblick
   - spectacle
@@ -74,3 +73,8 @@ python:
   - pyenv-virtualenv
   # Apps to install using pipx (poetry is installed by `make prepare`)
   pipx_apps: []
+
+productivity:
+  homebrew_apps:
+  - zoomus
+  - notion
