@@ -46,6 +46,12 @@ To facilitate Python development, the `make prepare` installs `pipx`. `pipx` all
       - Ctrl-p and ctrl-n
 -  Replace `roles` in the `setup.yml` playbook with the `include_role` [directive](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/include_role_module.html)
 -  Configure lazygit with my command overrides (~/Library/Application Support/lazygit/config.yml)
+-  Add personal apps:
+   -  Kindle
+   -  Lastpass
+   -  Microsoft Todo
+-  Add other apps:
+   -  Github Desktop
 
 # Known Issues
 -  This only works on Homebrew 2.7.0 and above. Brew recently changed the syntax for installing Cask apps, which resulted in this [issue](https://github.com/ansible-collections/community.general/issues/1524).
