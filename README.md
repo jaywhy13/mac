@@ -49,6 +49,12 @@ To facilitate Python development, the `make prepare` installs `pipx`. `pipx` all
 -  Add /usr/local/code-shell script
 -  Add `add-icon` script that adds an icon to ~/.tmux-icons
 -  https://github.com/yardnsm/tmux-1password
+-  Add personal apps:
+   -  Kindle
+   -  Lastpass
+   -  Microsoft Todo
+-  Add other apps:
+   -  Github Desktop
 
 # Known Issues
 -  This only works on Homebrew 2.7.0 and above. Brew recently changed the syntax for installing Cask apps, which resulted in this [issue](https://github.com/ansible-collections/community.general/issues/1524).

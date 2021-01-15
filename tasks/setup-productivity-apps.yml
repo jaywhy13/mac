@@ -1,0 +1,6 @@
+---
+- name: Install Productivity apps via Brew
+  homebrew:
+    name: "{{ item }}"
+    state: present
+  loop:  "{{ python.homebrew_apps }}"
