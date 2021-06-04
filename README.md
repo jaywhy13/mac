@@ -55,6 +55,7 @@ To facilitate Python development, the `make prepare` installs `pipx`. `pipx` all
    -  Microsoft Todo
 -  Add other apps:
    -  Github Desktop
+-  Add `detachKeys` to `~/.docker/config.json` based on [this link](https://stackoverflow.com/a/41820278/1267625)
 
 # Known Issues
 -  This only works on Homebrew 2.7.0 and above. Brew recently changed the syntax for installing Cask apps, which resulted in this [issue](https://github.com/ansible-collections/community.general/issues/1524).
