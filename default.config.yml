@@ -33,6 +33,8 @@ dotfiles_repo_version: main
 dotfiles_repo_local_destination: "~/.dotfiles"
 dotfiles_files:
   - .zshrc
+  - .aliases
+  - .nanorc
   - .gitconfig
   - .gitignore_global
   - .tmux.conf.local
