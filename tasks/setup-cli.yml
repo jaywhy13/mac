@@ -4,3 +4,4 @@
     name: "{{ item }}"
     state: present
   loop:  "{{ cli.homebrew_apps }}"
+  when: ansible_distribution == 'MacOSX'

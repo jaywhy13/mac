@@ -4,6 +4,7 @@
     name: "{{ item }}"
     state: present
   loop:  "{{ homebrew_apps }}"
+  when: ansible_distribution == 'MacOSX'
 
 - name: Check which cask apps are installed
   shell: brew list --cask {{ item }}
@@ -11,10 +12,11 @@
   register: cask_apps
   ignore_errors: true
   changed_when: false
+  when: ansible_distribution == 'MacOSX'
 
 - name: Install cask apps
   shell: brew install --cask {{ item }}
-  when: "'not installed' in cask_apps['results'][index].stderr"
+  when: "'not installed' in cask_apps['results'][index].stderr and ansible_distribution == 'MacOSX'"
   ignore_errors: true
   loop:  "{{ homebrew_cask_apps }}"
   loop_control:

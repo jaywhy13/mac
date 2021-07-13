@@ -5,3 +5,4 @@
     dest: "/Library/Fonts"
     remote_src: yes
   loop: "{{ fonts}}"
+  when: ansible_distribution == 'MacOSX'

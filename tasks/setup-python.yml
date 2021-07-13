@@ -4,7 +4,8 @@
     name: "{{ item }}"
     state: present
   loop:  "{{ python.homebrew_apps }}"
+  when: ansible_distribution == 'MacOSX'
 
-- name: Install Python apps via Brew
+- name: Install Python apps via Pipx
   command: "pipx install {{ item }}"
   loop:  "{{ python.pipx_apps }}"
