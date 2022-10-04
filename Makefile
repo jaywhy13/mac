@@ -6,3 +6,6 @@ setup:
 	poetry run ansible-galaxy install -r requirements.yml
 	poetry run ansible-playbook setup.yml -i inventory --ask-become-pass
 
+decommission:
+	echo "Running Ansible to decommission machine"
+

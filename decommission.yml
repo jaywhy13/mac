@@ -1,0 +1,13 @@
+---
+- hosts: all
+
+  vars_files:
+    - default.config.yml
+
+  roles:
+    - { role: geerlingguy.dotfiles }
+
+  tasks:
+    - include_tasks: tasks/uninstall-mac-apps.yml
+    - include_tasks: tasks/uninstall-productivity-apps.yml
+

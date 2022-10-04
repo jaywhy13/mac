@@ -1,0 +1,23 @@
+---
+- name: Remove apps installed via Brew
+  homebrew:
+    name: "{{ item }}"
+    state: absent
+  loop:  "{{ homebrew_apps }}"
+  when: ansible_distribution == 'MacOSX'
+
+- name: Check which cask apps are installed
+  shell: brew list --cask {{ item }}
+  loop:  "{{ homebrew_cask_apps }}"
+  register: cask_apps
+  ignore_errors: true
+  changed_when: false
+  when: ansible_distribution == 'MacOSX'
+
+- name: Uninstall cask apps
+  shell: brew uninstall --cask {{ item }}
+  when: "'installed' in cask_apps['results'][index].stderr and ansible_distribution == 'MacOSX'"
+  ignore_errors: true
+  loop:  "{{ homebrew_cask_apps }}"
+  loop_control:
+    index_var: index

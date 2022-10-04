@@ -1,0 +1,7 @@
+---
+- name: Remove Productivity apps via Brew
+  homebrew:
+    name: "{{ item }}"
+    state: absent
+  loop:  "{{ python.homebrew_apps }}"
+  when: ansible_distribution == 'MacOSX'
