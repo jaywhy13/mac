@@ -75,6 +75,7 @@ cli:
   # Git
   - lazygit
   - pgcli
+  - gh # Github CLI
 productivity:
   homebrew_apps:
   - zoomus
