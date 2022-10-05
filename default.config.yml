@@ -14,7 +14,6 @@ homebrew_taps:
 homebrew_cask_apps:
   - docker
   - firefox-developer-edition
-  - licecap
   - slack
   - visual-studio-code
   - whatsapp
@@ -45,14 +44,10 @@ dotfiles_files:
 repositories:
   - url: https://github.com/ohmyzsh/ohmyzsh
     destination: "~/.oh-my-zsh"
-  # SCM Breeze for git aliases
-  - url: https://github.com/scmbreeze/scm_breeze
-    destination: "~/.scm_breeze"
 
 # Shell apps to install
 shell_apps:
   - ohmyzsh
-  - scmbreeze
 
 # OSX Defaults
 Configure_Bluetooth: yes

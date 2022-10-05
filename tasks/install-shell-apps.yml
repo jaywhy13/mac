@@ -4,12 +4,3 @@
     repo: "https://github.com/ohmyzsh/ohmyzsh"
     dest: "~/.oh-my-zsh"
   when: "'ohmyzsh' in shell_apps"
-- name: Install SCM Breeze
-  block:
-  - name: Checkout SCM Breeze
-    git:
-      repo: "https://github.com/scmbreeze/scm_breeze"
-      dest: "~/.scm_breeze"
-  - name: Install SCM Breeze
-    command: "~/.scm_breeze/install.sh"
-  when: "'scmbreeze' in shell_apps"
